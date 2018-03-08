@@ -2,15 +2,13 @@
 
 This work is an extention/contribution to timcera's work (timcera/qgis-desktop-ubuntu)
 
-docker-qgis3-desktop-ubuntu
-
 Instead of compiling, this image is a "apt-get install" from http://qgis.org/ubuntugis of the latest QGIS.
 
 This also includes installation of gdal-bin and python-gdal.
 Getting the image
 Use the docker repository:
 
-docker pull timcera/qgis-desktop-ubuntu:latest
+docker pull rizwanalvi1/docker-qgis3-desktop-ubuntu
 
 Required Manual Installation
 
@@ -31,7 +29,7 @@ docker run --rm \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=unix$DISPLAY \
 -e HHHOME=${HOME} \
-timcera/qgis-desktop-ubuntu:latest
+rizwanalvi1/docker-qgis3-desktop-ubuntu
 
 Be sure to make the "qgis" script (or whatever you called your script) an executable.
 
@@ -64,3 +62,4 @@ docker ps -a
 then
 
 docker rm <process id or container name>
+
